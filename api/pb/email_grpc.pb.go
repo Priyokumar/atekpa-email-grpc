@@ -4,7 +4,7 @@
 // - protoc             v5.28.1
 // source: email.proto
 
-package emailpb
+package pb
 
 import (
 	context "context"
