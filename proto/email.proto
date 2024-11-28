@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package api;
+option go_package = "api/emailpb";
+
+service EmailService{
+    rpc SendOrderConfiramtionEmail (OrderConfirmationRequest) returns (Response);
+}
+
+message OrderConfirmationRequest{
+    string orderID = 1;
+    string customerName = 2;
+    string productName = 3;
+    string productPicture = 4;
+}
+
+message Response{
+    string message = 1;
+    bool error = 2;
+}
